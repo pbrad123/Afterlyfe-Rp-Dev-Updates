@@ -1,0 +1,28 @@
+<CodeWalkerProject>
+  <Name>New CodeWalker Project</Name>
+  <Version value="1" />
+  <YmapFilenames>
+    <Item>police_milo_.ymap</Item>
+    <Item>kt1_04_strm_0.ymap</Item>
+    <Item>hei_kt1_occl_03.ymap</Item>
+    <Item>kt1_occl_03.ymap</Item>
+    <Item>exterier.ymap</Item>
+    <Item>hei_kt1_04_critical_0.ymap</Item>
+    <Item>hei_kt1_04_strm_0.ymap</Item>
+    <Item>kt1_04_critical_0.ymap</Item>
+  </YmapFilenames>
+  <YtypFilenames>
+    <Item>police.ytyp</Item>
+    <Item>kt1_04_interior_kt1_04_roadtunnel_int.ytyp</Item>
+  </YtypFilenames>
+  <YbnFilenames />
+  <YndFilenames />
+  <YnvFilenames />
+  <TrainsFilenames />
+  <ScenarioFilenames />
+  <AudioRelFilenames />
+  <YdrFilenames />
+  <YddFilenames />
+  <YftFilenames />
+  <YtdFilenames />
+</CodeWalkerProject>

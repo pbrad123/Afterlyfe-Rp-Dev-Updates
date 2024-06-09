@@ -1,0 +1,449 @@
+@import url("https://fonts.cdnfonts.com/css/akrobat");
+
+body {
+    font-family: "Akrobat"; font-size: 16px; text-rendering: optimizeLegibility; font-weight: initial;
+    overflow: hidden;
+    user-select: none; -webkit-user-drag: none;
+}
+
+img {
+	-webkit-user-drag: none;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  opacity: 0.7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FCCF32;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #9c8019;
+}
+
+/* MAIN */
+#main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 255, 0.3);
+}
+
+#main #background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#main h1 {
+    position: relative;
+    bottom: 0.2%;
+    left: 16%;
+    color: white;
+    font-size: 13.3vmin;
+    text-shadow: 0 0 24px white;
+    justify-content: center;
+}
+
+#main #background-frame {
+    position: relative;
+    width: 69%;
+    height: 66%;
+    left: 15.5%;
+    top: -11%;
+    clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+#main #background-frame #frame {
+    width: 100%;
+    height: 100%;
+}
+
+#main #wrapper {
+    position: relative;
+    width: 32%;
+    height: 28%;
+    left: 20.1%;
+    bottom: 69%;
+  }
+
+#main #wrapper img {
+    width: 100%;
+    height: 100%;
+}
+
+#main #wrapper #plateinput {
+    position: absolute;
+    top: 25%;
+    left: 9.5%;
+    text-align: center;
+    width: 80%;
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: 12.5vmin;
+    font-family: "Akrobat ExtraBold";
+}
+
+#main #wrapper #plateinput:focus {
+    outline: none;
+}
+
+#main h3 {
+    position: relative;
+    bottom: 98%;
+    left: 109.8%;
+    color: white;
+    font-size: 2.8vmin;
+    letter-spacing: 1.5px;
+    font-family: "Akrobat Bold";
+}
+
+#main h4 {
+    position: relative;
+    bottom: 117%;
+    left: 110%;
+    color: #F1DD3F;
+    font-size: 4vmin;
+    font-family: "Akrobat Bold";
+}
+
+#main h5 {
+    position: relative;
+    bottom: 166%;
+    left: 143%;
+    color: white;
+    font-size: 2.8vmin;
+    letter-spacing: 1.5px;
+    font-family: "Akrobat Bold";
+}
+
+#main h6 {
+    position: relative;
+    bottom: 198.5%;
+    left: 143%;
+    color: #8AD846;
+    font-size: 4vmin;
+    font-family: "Akrobat Bold";
+}
+
+#main h7 {
+    position: relative;
+    bottom: 156%;
+    left: 1.2%;
+    color: white;
+    font-size: 2.3vmin;
+    letter-spacing: 3px;
+    font-family: "Akrobat Bold";
+}
+
+#main h7 .colored {
+    color: #6845C2;
+}
+
+#main #wrapper #buylicense {
+    position: absolute;
+    top: 59.5%;
+    left: 109.5%;
+    width: 37.5%;
+    height: 25%;
+    background: linear-gradient(12deg, #ff692c 20%, #ffd338 100%, #fa7199, #e85a19);
+    border: none;
+    border-radius: 8px;
+    outline: solid 6px transparent;
+    color: white;
+    font-size: 2.2vmin;
+    letter-spacing: 2px;
+    font-family: "Akrobat Bold";
+    box-shadow: 0px 0px 50px #ff682cce; 
+    transition: all 0.5s;
+}
+
+#main #wrapper #buylicense:hover {
+    outline: solid 6px rgba(255, 104, 44, 60%);
+}
+
+#main #wrapper #selllicense {
+    position: absolute;
+    top: 115.5%;
+    left: 72.5%;
+    width: 34.4%;
+    height: 13.7%;
+    background: #FCCF32;
+    border: none;
+    border-radius: 8px;
+    outline: solid 5px transparent;
+    color: white;
+    font-size: 1.3vmin;
+    letter-spacing: 2px;
+    font-family: "Akrobat Bold";
+    box-shadow: 0px 0px 5px #ff682cce; 
+    transition: all 0.5s;
+}
+
+#main #wrapper #selllicense:hover {
+    background: #FFD132;
+    outline: solid 5px rgba(252, 207, 50, 40%);
+}
+
+#main .platewrapper {
+    position: relative;
+    width: 57%;
+    height: 19.2%;
+    left: 20.1%;
+    bottom: 60%;
+    overflow-y: auto;
+}
+
+#main .platewrapper .plate-row {
+    position: relative;
+    top: 6%;
+    width: 30%;
+    height: 49%;
+    display: flex;
+    align-items: center;
+    margin-right: 3%;
+    display: inline-flex;
+    flex-direction: row;
+}
+
+#main .platewrapper .plate-row .plateframe {
+    position: relative;
+    left: 0;
+    width: 50%;
+    height: 55%;
+    margin-right: 2%;
+    margin-left: 2%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border-color: white;
+    border-style: solid solid solid solid;
+    border-width: 18px 5px 5px 5px;
+    color: white;
+    font-family: "Akrobat ExtraBold";
+    font-size: 3.7vmin;
+}
+
+#main .platewrapper .buyplates {
+    position: relative;
+    left: 0;
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main .platewrapper .buyplates .buy-btn {
+    position: absolute;
+    left: 2.5%;
+    top: 10%;
+    width: 95%;
+    height: 80%;
+    background: #FCCF32;
+    color: white;
+    opacity: 0;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .3rem;
+    font-size: 2vmin;
+    font-family: "Akrobat Bold";
+    letter-spacing: 2px;
+}
+
+#main .platewrapper .buyplates .buy-btn:hover {
+    opacity: 1;
+}
+
+#main .plate-price {
+    color: #8AD846;
+    font-size: 2.8vmin;
+}
+
+@media only screen and (max-width: 800px) {
+    #main h1 {
+        left: 15%;
+        bottom: 3%;
+        font-size: 10.4vmin;
+    }
+    #main #plate h2 {
+        bottom: 104%;
+        font-size: 11vmin;
+    }
+}
+
+.menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 42.5%;
+    height: 85%;
+    background-image: url('..//images/menu_background.png');
+    background-size: 100% 100%;
+    text-align: center;
+    display: none;
+}
+
+.menu .m-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 45%;
+    max-height: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.menu .m-wrapper .m-label {
+    font-family: 'Akrobat Black', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    font-size: 3.5vh;
+    margin: 0;
+    overflow-wrap: break-word;
+}
+
+.menu .m-wrapper p {
+    position: relative;
+    width: 100%;
+    color: white;
+    font-family: 'Akrobat Light', sans-serif;
+    font-size: 1.6vh;
+}
+
+.menu .m-wrapper p span {
+    color: #ffde2a;
+}
+
+.menu .m-wrapper .m-buttons {
+    position: relative;
+    left: 20%;
+    width: 60%;
+}
+
+.menu .m-wrapper .m-buttons button {
+    position: relative;
+    width: 45%;
+    height: 6vh;
+    border-radius: .3rem;
+    border: none;
+    outline: none;
+    font-size: 2vh;
+    margin: .2vh;
+    transition: all .1s;
+    font-family: 'Akrobat ExtraBold', sans-serif;
+}
+
+.menu .m-wrapper .m-buttons button[type="submit"] {
+    background-color: rgb(255, 222, 42);
+    color: #393c41;
+}
+
+.menu .m-wrapper .m-buttons button[type="submit"]:hover {
+    outline: rgba(255, 222, 42, 0.5) solid 4px;
+}
+
+.menu .m-wrapper .m-buttons button[type="close"] {
+    background-color: rgba(114, 114, 114, 0.39);
+    color: white;
+}
+
+.menu .m-wrapper .m-buttons button[type="close"]:hover {
+    outline: rgba(114, 114, 114, 0.5) solid 4px;
+}
+
+.menu .m-wrapper .m-menu {
+    position: relative;
+    left: 5%;
+    width: 90%;
+    max-height: 25vh;
+    overflow-y: auto;
+    padding: .25vh;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+}
+
+.menu .m-wrapper .m-input {
+    position: relative;
+    left: 5%;
+    width: 90%;
+    padding: .25vh;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+}
+
+.menu .m-wrapper .m-input input {
+    width: 100%;
+    height: 6vh;
+    border: none;
+    outline: none;
+    border-radius: .3rem;
+    margin-bottom: 1vh;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.349);
+    color: white;
+    font-family: 'Akrobat Light', sans-serif;
+    font-size: 1.5vh;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.menu .m-wrapper .m-menu .m-row {
+    position: relative;
+    width: 100%;
+    height: 8vh;
+    background-color: rgba(114, 114, 114, 0.534);
+    border-radius: .3rem;
+    margin-bottom: .5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Akrobat Black', sans-serif;
+    font-size: 1.85vh;
+    z-index: 9999;
+    transition: all .5s;
+}
+
+.menu .m-wrapper .m-menu .m-row.active {
+    background-color: #ffde2a;
+}
+
+.menu .m-wrapper .m-menu .m-row:last-child {
+    margin-bottom: 0;
+}
+
+.m-menu ::-webkit-scrollbar {
+    width: 3px;
+    border-radius: .3rem;
+}
+
+.m-menu::-webkit-scrollbar-track {
+    background-color: rgba(114, 114, 114, 0.45);
+    border-radius: .3rem;
+}
+
+.m-menu::-webkit-scrollbar-thumb {
+  background: #f1d078; 
+  border-radius: .3rem;
+}

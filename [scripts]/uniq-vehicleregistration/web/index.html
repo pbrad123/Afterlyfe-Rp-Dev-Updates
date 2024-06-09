@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>REGISTRACIJA VOZILA</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <div id="main">
+        <img id="background" src="images/bg.png" alt="background" />
+
+        <h1>BUYING A LICENSE PLATE</h1>
+
+        <div id="background-frame">
+            <img id="frame" src="images/frame.png" alt="background-2">
+        </div>
+
+        <div id="wrapper">
+            <img src="images/tablica.png" alt="frame">
+            <input id='plateinput' type="text" value="1ABC234" maxlength="7" onchange onpropertychange onkeyuponpaste oninput="input_changed()"></input>
+            <h3>LEVEL</h3>
+            <h4 id="plate_type">REGULAR</h4>
+            <h5>COST</h5>
+            <h6 id="plate_cost">$50,000</h6>
+            <h7>NUMBERS FOR SALE <span class="colored">FROM PLAYERS</span></h7>
+            <button id="buylicense">BUY A LICENSE PLATE</button>
+            <button id="selllicense">SELL YOUR LICENSE PLATE</button>
+        </div>
+
+        <div class="platewrapper">
+        </div>
+    </div>
+
+    <div class="menu">
+    </div>
+</body>

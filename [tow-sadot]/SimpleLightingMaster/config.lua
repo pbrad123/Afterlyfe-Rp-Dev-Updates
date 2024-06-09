@@ -1,0 +1,1 @@
+SetConvarReplicated("lighting_lkey", "")

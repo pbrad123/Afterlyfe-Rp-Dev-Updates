@@ -1,0 +1,3 @@
+ScreenshotWebhook   = 'https://discord.com/api/webhooks/1243614916062089236/ikEMYG0DNTQZRuOEID7A1o-0HiU7WXO6rJ7gJunuovQYgzCtRTeVPnVCFCuBRiU82Opb' --Discord webhook link
+DownLogWebhook      = 'https://discord.com/api/webhooks/1243614916062089236/ikEMYG0DNTQZRuOEID7A1o-0HiU7WXO6rJ7gJunuovQYgzCtRTeVPnVCFCuBRiU82Opb' --Discord webhook link
+DeathLogWebhook     = 'https://discord.com/api/webhooks/1243614916062089236/ikEMYG0DNTQZRuOEID7A1o-0HiU7WXO6rJ7gJunuovQYgzCtRTeVPnVCFCuBRiU82Opb' --Discord webhook link

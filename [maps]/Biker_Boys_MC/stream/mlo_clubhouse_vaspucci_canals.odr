@@ -1,0 +1,171 @@
+Version 165 32
+{
+	Shaders
+	{
+		normal_spec.sps
+		{
+			BumpSampler mlo_clubhouse_vaspucci_canals\gz_v_fa_wood02_n.otx
+			DiffuseSampler mlo_clubhouse_vaspucci_canals\gz_v_bb_wood02.otx
+			SpecSampler mlo_clubhouse_vaspucci_canals\gz_v_fa_wood02_s.otx
+			Bumpiness 1.0000000
+			HardAlphaBlend 1.0000000
+			SpecMapIntMask 1.0000000 0.0000000 0.0000000
+			SpecularFalloffMult 100.0000000
+			SpecularFresnel 0.9700000
+			SpecularIntensityMult 0.1250000
+			UseTessellation 0.0000000
+		}
+		default.sps
+		{
+			DiffuseSampler mlo_clubhouse_vaspucci_canals\ss_v_breezeblock2.otx
+			HardAlphaBlend 1.0000000
+			UseTessellation 0.0000000
+		}
+		normal_spec.sps
+		{
+			BumpSampler mlo_clubhouse_vaspucci_canals\im_concrete33_n.otx
+			DiffuseSampler mlo_clubhouse_vaspucci_canals\im_concrete33_black.otx
+			SpecSampler mlo_clubhouse_vaspucci_canals\im_concrete33_s.otx
+			Bumpiness 1.0000000
+			HardAlphaBlend 1.0000000
+			SpecMapIntMask 1.0000000 0.0000000 0.0000000
+			SpecularFalloffMult 100.0000000
+			SpecularFresnel 0.9700000
+			SpecularIntensityMult 0.1250000
+			UseTessellation 0.0000000
+		}
+		normal_spec.sps
+		{
+			BumpSampler mlo_clubhouse_vaspucci_canals\metal_black_n.otx
+			DiffuseSampler mlo_clubhouse_vaspucci_canals\1metal_black.otx
+			SpecSampler mlo_clubhouse_vaspucci_canals\metal_black_s.otx
+			Bumpiness 1.0000000
+			HardAlphaBlend 1.0000000
+			SpecMapIntMask 1.0000000 0.0000000 0.0000000
+			SpecularFalloffMult 100.0000000
+			SpecularFresnel 0.9700000
+			SpecularIntensityMult 0.1250000
+			UseTessellation 0.0000000
+		}
+		normal_spec.sps
+		{
+			BumpSampler mlo_clubhouse_vaspucci_canals\windows_n.otx
+			DiffuseSampler mlo_clubhouse_vaspucci_canals\Natural_alpine_spruce_SPEC.otx
+			SpecSampler mlo_clubhouse_vaspucci_canals\windows_s.otx
+			Bumpiness 1.0000000
+			HardAlphaBlend 1.0000000
+			SpecMapIntMask 1.0000000 0.0000000 0.0000000
+			SpecularFalloffMult 100.0000000
+			SpecularFresnel 0.9700000
+			SpecularIntensityMult 0.1250000
+			UseTessellation 0.0000000
+		}
+		default.sps
+		{
+			DiffuseSampler mlo_clubhouse_vaspucci_canals\tile-texture-arch-line-59.otx
+			HardAlphaBlend 1.0000000
+			UseTessellation 0.0000000
+		}
+		normal.sps
+		{
+			BumpSampler mlo_clubhouse_vaspucci_canals\mh_v_aph_floormarbledark_n.otx
+			DiffuseSampler mlo_clubhouse_vaspucci_canals\mh_v_aph_floormarbledark_s.otx
+			Bumpiness 1.0000000
+			HardAlphaBlend 1.0000000
+			SpecularFalloffMult 100.0000000
+			SpecularFresnel 0.9700000
+			SpecularIntensityMult 0.1250000
+			UseTessellation 0.0000000
+		}
+		normal.sps
+		{
+			BumpSampler mlo_clubhouse_vaspucci_canals\logobar_n.otx
+			DiffuseSampler mlo_clubhouse_vaspucci_canals\Untitled-1.otx
+			Bumpiness 1.0000000
+			HardAlphaBlend 1.0000000
+			SpecularFalloffMult 100.0000000
+			SpecularFresnel 0.9700000
+			SpecularIntensityMult 0.1250000
+			UseTessellation 0.0000000
+		}
+		normal_spec.sps
+		{
+			BumpSampler mlo_clubhouse_vaspucci_canals\9buildingtext_n.otx
+			DiffuseSampler mlo_clubhouse_vaspucci_canals\9buldingtext.otx
+			SpecSampler mlo_clubhouse_vaspucci_canals\9buildingtext_s.otx
+			Bumpiness 1.0000000
+			HardAlphaBlend 1.0000000
+			SpecMapIntMask 1.0000000 0.0000000 0.0000000
+			SpecularFalloffMult 100.0000000
+			SpecularFresnel 0.9700000
+			SpecularIntensityMult 0.1250000
+			UseTessellation 0.0000000
+		}
+		normal.sps
+		{
+			BumpSampler mlo_clubhouse_vaspucci_canals\tl_v_michael_floor_wood_n.otx
+			DiffuseSampler mlo_clubhouse_vaspucci_canals\floor_board_black.otx
+			Bumpiness 1.0000000
+			HardAlphaBlend 1.0000000
+			SpecularFalloffMult 100.0000000
+			SpecularFresnel 0.9700000
+			SpecularIntensityMult 0.1250000
+			UseTessellation 0.0000000
+		}
+		normal_spec.sps
+		{
+			BumpSampler mlo_clubhouse_vaspucci_canals\BRICKWALL_N.otx
+			DiffuseSampler mlo_clubhouse_vaspucci_canals\Breezeblock.otx
+			SpecSampler mlo_clubhouse_vaspucci_canals\BRICKWALL_S.otx
+			Bumpiness 1.0000000
+			HardAlphaBlend 1.0000000
+			SpecMapIntMask 1.0000000 0.0000000 0.0000000
+			SpecularFalloffMult 100.0000000
+			SpecularFresnel 0.9700000
+			SpecularIntensityMult 0.1250000
+			UseTessellation 0.0000000
+		}
+		decal.sps
+		{
+			DiffuseSampler mlo_clubhouse_vaspucci_canals\David_San.otx
+			SpecularFalloffMult 100.0000000
+			SpecularFresnel 0.9700000
+			SpecularIntensityMult 0.0000000
+			UseTessellation 0.0000000
+		}
+	}
+	Skeleton null
+	LodGroup
+	{
+		High 9998.0
+		{
+			mlo_clubhouse_vaspucci_canals\2walls.mesh 0
+			mlo_clubhouse_vaspucci_canals\lower_wall.mesh 0
+			mlo_clubhouse_vaspucci_canals\g_celling.mesh 0
+			mlo_clubhouse_vaspucci_canals\g_walls.mesh 0
+			mlo_clubhouse_vaspucci_canals\2celling.mesh 0
+			mlo_clubhouse_vaspucci_canals\m_floor.mesh 0
+			mlo_clubhouse_vaspucci_canals\m_walls.mesh 0
+			mlo_clubhouse_vaspucci_canals\g_floor.mesh 0
+			mlo_clubhouse_vaspucci_canals\floor_main1.mesh 0
+			mlo_clubhouse_vaspucci_canals\bricks1.mesh 0
+			mlo_clubhouse_vaspucci_canals\beam.mesh 0
+			mlo_clubhouse_vaspucci_canals\lower_floor.mesh 0
+			mlo_clubhouse_vaspucci_canals\low_celling.mesh 0
+			mlo_clubhouse_vaspucci_canals\2floor.mesh 0
+			mlo_clubhouse_vaspucci_canals\m_celling.mesh 0
+			mlo_clubhouse_vaspucci_canals\jacket_logo001.mesh 0
+			mlo_clubhouse_vaspucci_canals\jacket_logo002.mesh 0
+		}
+		Med 9998.0
+		Low 9998.0
+		Vlow 9998.0
+		AABBMin -7.8548965 -36.6903458 -11.1039953
+		AABBMax 36.0295639 15.3674564 3.6039088
+		Radius 34.8288
+		Center 14.0873337 -10.6614456 -3.7500434
+	}
+	Light null
+	Bound null
+	Joints null
+}

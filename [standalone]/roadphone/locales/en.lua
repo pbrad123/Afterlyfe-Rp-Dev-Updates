@@ -1,0 +1,58 @@
+local Translations = {
+    error = {},
+    success = {},
+    info = {
+    ['openphone'] = 'Open phone',
+    ['nophone'] = 'You do not own a phone.',
+    ['noroadpods'] = 'You do not own roadpods.',
+    ['day_saturday'] = 'Saturday',
+    ['day_sunday'] = 'Sunday',
+    ['day_monday'] = 'Monday',
+    ['day_tuesday'] = 'Tuesday',
+    ['day_wednesday'] = 'Wednesday',
+    ['day_thursday'] = 'Thursday',
+    ['day_friday'] = 'Friday',
+    ['radiojoined'] = 'You have entered the radio  %{value}',
+    ['fixphone'] = 'If this message is not gone in a few seconds type /fixphone.',
+    ['message_app_new_message'] = 'New Message from  %{value}',
+    ["message_app_new_groupmessage"] = "New message to the group",
+    ['mail_received'] = " has sent you an email.",
+    ["billing_paid"] = "The bill has been paid $",
+    ["billing_notmoney"] = "You don't have enough money.",
+    ['bill_paid'] = 'The bill of ',
+    ['bill_paid2'] = '$ was paid.',
+    ['society_bill_paid'] = 'One of your bills of ',
+    ['society_bill_paid2'] = '$ was paid.',
+    ['valet_car_delivered'] = "Car delivered",
+    ['valet_car_delivered_2'] = " has his car delivered, for  %{value} $",
+    ['messages_app_newgroup_name'] = "New Group",
+    ["command_required_information"] = "You did not write the required information",
+    ['wave_verify'] = "You have verified the player",
+    ['wave_remove_verify'] = "The player is now no longer verified",
+    ['connect_verify'] = "You have verified the player",
+    ['connect_remove_verify'] = "The player is now no longer verified",
+    ['crypto_error_buymore'] = "Buy Crypto worth more than 1$",
+    ['crypto_error_sellmore'] = "Sell Crypto worth more than 1$",
+    ['crypto_error_nomoney'] = "You don't have enough money to buy Crypto.",
+    ['crypto_error_nocrypto'] = "You do not have enough crypto to sell.",
+    ['crypto_please_wait_sell'] = "Please wait before sell crypto again.",
+    ['crypto_please_wait_buy'] = "Please wait before buy crypto again.",
+    ['bank_money_transaction'] = "Money sent to  %{value}.",
+    ['control_center_already_in_use'] = "This number is already in use!",
+    ['control_center_leave'] = "You left the control center for the  %{value}!",
+    ['control_center_take_control'] = "Press E to take over the control center for the %{value}.",
+    ['control_center_taken_control'] = "You have taken over the control center for the %{value} !",
+    ['control_center_cannot_leave'] = "You cannot currently leave the control center.",
+    ['messages_groupchat_added'] = "You have been added to the %{value} group.",
+    ['voice_memos_default_name'] = "New Recording",
+    ['message_app_already_in_group'] = "You are already in this group."
+
+
+},
+text = {},
+}
+
+Lang = Locale:new({
+phrases = Translations,
+warnOnMissing = true
+})

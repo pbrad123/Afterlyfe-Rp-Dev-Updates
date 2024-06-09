@@ -1,0 +1,58 @@
+local Translations = {
+    error = {},
+    success = {},
+    info = {
+    ['openphone'] = 'Telefon öffnen',
+    ['nophone'] = 'Du besitzt kein Telefon.',
+    ['noroadpods'] = 'Du besitzt keine RoadPods.',
+    ['day_saturday'] = 'Samstag',
+    ['day_sunday'] = 'Sonntag',
+    ['day_monday'] = 'Montag',
+    ['day_tuesday'] = 'Dienstag',
+    ['day_wednesday'] = 'Mittwoch',
+    ['day_thursday'] = 'Donnerstag',
+    ['day_friday'] = 'Freitag',
+    ['radiojoined'] = 'Du hast den Radiokanal %{value}  betreten',
+    ['fixphone'] = 'Wenn diese Nachricht in ein paar Sekunden nicht verschwindet, tippe /fixphone.',
+    ['message_app_new_message'] = 'Neue Nachricht von %{value} ',
+    ["message_app_new_groupmessage"] = "Neue Nachricht in der Gruppe",
+    ['mail_received'] = " hat dir eine E-Mail geschickt.",
+    ["billing_paid"] = "Die Rechnung wurde bezahlt: $",
+    ["billing_notmoney"] = "Du hast nicht genug Geld.",
+    ['bill_paid'] = '~g~Die Rechnung im Wert von ~w~',
+    ['bill_paid2'] = '$ ~g~wurde bezahlt.',
+    ['society_bill_paid'] = '~g~Eine von dir ausgestellte Rechnung im Wert von ~w~',
+    ['society_bill_paid2'] = '$ ~g~wurde bezahlt.',
+    ['valet_car_delivered'] = "Auto zugestellt",
+    ['valet_car_delivered_2'] = " hat sein Auto zugestellt bekommen, für %{value} $",
+    ['messages_app_newgroup_name'] = "Neue Gruppe",
+    ["command_required_information"] = "Du hast die erforderlichen Informationen nicht angegeben.",
+    ['wave_verify'] = "Du hast den Spieler verifiziert.",
+    ['wave_remove_verify'] = "Der Spieler ist jetzt nicht mehr verifiziert.",
+    ['connect_verify'] = "Du hast den Spieler verifiziert.",
+    ['connect_remove_verify'] = "Der Spieler ist jetzt nicht mehr verifiziert.",
+    ['crypto_error_buymore'] = "Kaufe Kryptowährung im Wert von mehr als 1$.",
+    ['crypto_error_sellmore'] = "Verkaufe Kryptowährung im Wert von mehr als 1$.",
+    ['crypto_error_nomoney'] = "Du hast nicht genug Geld, um Kryptowährung zu kaufen.",
+    ['crypto_error_nocrypto'] = "Du hast nicht genug Kryptowährung zum Verkaufen.",
+    ['crypto_please_wait_sell'] = "Bitte warte, bevor du erneut Kryptowährung verkaufst.",
+    ['crypto_please_wait_buy'] = "Bitte warte, bevor du erneut Kryptowährung kaufst.",
+    ['bank_money_transaction'] = "Geld an %{value}  gesendet.",
+    ['control_center_already_in_use'] = "Diese Nummer ist bereits in Benutzung!",
+    ['control_center_leave'] = "Du hast die Leitstelle für die %{value}  verlassen!",
+    ['control_center_take_control'] = "Drücke E um die Leitstelle für die %{value}  zu übernehmen.",
+    ['control_center_taken_control'] = "Du hast die Leitstelle für die %{value}  übernommen!",
+    ['control_center_cannot_leave'] = "Du kannst aktuell die Leitstelle nicht verlassen.",
+    ['messages_groupchat_added'] = "Du wurdest zur Gruppe %{value} hinzugefügt.",
+    ['voice_memos_default_name'] = "Neue Aufnahme",
+    ['message_app_already_in_group'] = "Du bist bereits in dieser Gruppe."
+
+
+},
+text = {},
+}
+
+Lang = Locale:new({
+phrases = Translations,
+warnOnMissing = true
+})

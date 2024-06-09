@@ -1,0 +1,5 @@
+fx_version 'cerulean'
+game 'gta5'
+description 'maps'
+lua54 'yes'
+this_is_a_map 'yes'

@@ -1,6 +1,6 @@
 Config = {}
 Config.UseTruckerJob = false -- true = The shops stock is based on when truckers refill it | false = shop inventory never runs out
-Config.UseTarget = GetConvar('UseTarget', 'true') == 'false' -- Use qb-target interactions (don't change this, go to your server.cfg and add `setr UseTarget true` to use this and just that from true to false or the other way around)
+Config.UseTarget = GetConvar('UseTarget', 'false') == 'true' -- Use qb-target interactions (don't change this, go to your server.cfg and add `setr UseTarget true` to use this and just that from true to false or the other way around)
 Config.ShopsInvJsonFile = './json/shops-inventory.json' -- json file location
 
 Config.SellCasinoChips = {
@@ -719,57 +719,6 @@ Config.Locations = {
         ['targetLabel'] = 'Open Leisure Shop',
         ['products'] = Config.Products['leisureshop'],
         ['showblip'] = true,
-        ['blipsprite'] = 52,
-        ['blipscale'] = 0.8,
-        ['blipcolor'] = 0,
-        ['delivery'] = vector4(-1507.64, 1505.52, 115.29, 262.2)
-    },
-
-    -- Blackmarket Locations
-    ['blackmarket'] = {
-        ['label'] = 'Blackmarket Materials',
-        ['coords'] = vector4(853.87, -2386.03, 30.36, 85.16),
-        ['ped'] = 'a_m_y_beach_01',
-        ['scenario'] = 'WORLD_HUMAN_STAND_MOBILE_CLUBHOUSE',
-        ['radius'] = 1.5,
-        ['targetIcon'] = 'fas fa-leaf',
-        ['targetLabel'] = 'Open Blackmarket Materials',
-        ['products'] = Config.Products['blackmarket'],
-        ['showblip'] = false,
-        ['blipsprite'] = 52,
-        ['blipscale'] = 0.8,
-        ['blipcolor'] = 0,
-        ['delivery'] = vector4(-1507.64, 1505.52, 115.29, 262.2)
-    },
-
-    -- Blackmarket Locations
-    ['blackmarket'] = {
-        ['label'] = 'Blackmarket Materials',
-        ['coords'] = vector4(-303.12, -1356.98, 31.39, 39.57),
-        ['ped'] = 'a_m_y_beach_01',
-        ['scenario'] = 'WORLD_HUMAN_STAND_MOBILE_CLUBHOUSE',
-        ['radius'] = 1.5,
-        ['targetIcon'] = 'fas fa-leaf',
-        ['targetLabel'] = 'Open Blackmarket Materials',
-        ['products'] = Config.Products['blackmarket'],
-        ['showblip'] = false,
-        ['blipsprite'] = 52,
-        ['blipscale'] = 0.8,
-        ['blipcolor'] = 0,
-        ['delivery'] = vector4(-1507.64, 1505.52, 115.29, 262.2)
-    },
-
-    -- Blackmarket Locations
-    ['blackmarket'] = {
-        ['label'] = 'Blackmarket Materials',
-        ['coords'] = vector4(-49.73, 6439.98, 31.49, 182.42),
-        ['ped'] = 'a_m_y_beach_01',
-        ['scenario'] = 'WORLD_HUMAN_STAND_MOBILE_CLUBHOUSE',
-        ['radius'] = 1.5,
-        ['targetIcon'] = 'fas fa-leaf',
-        ['targetLabel'] = 'Open Blackmarket Materials',
-        ['products'] = Config.Products['blackmarket'],
-        ['showblip'] = false,
         ['blipsprite'] = 52,
         ['blipscale'] = 0.8,
         ['blipcolor'] = 0,

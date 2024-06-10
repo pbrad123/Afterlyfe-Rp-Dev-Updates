@@ -82,6 +82,46 @@ Config.VitrineRewards = {
         },
         ['probability'] = 0.1
     },
+    [5] = {
+        ['item'] = 'weapon_blueprint_assaultrifle',
+        ['amount'] = {
+            ['min'] = 1,
+            ['max'] = 4
+        },
+        ['probability'] = 0.1
+    },
+    [6] = {
+        ['item'] = 'weapon_blueprint_sawnoffshotgun',
+        ['amount'] = {
+            ['min'] = 1,
+            ['max'] = 4
+        },
+        ['probability'] = 0.1
+    },
+    [7] = {
+        ['item'] = 'weapon_blueprint_minismg',
+        ['amount'] = {
+            ['min'] = 1,
+            ['max'] = 4
+        },
+        ['probability'] = 0.1
+    },
+    [8] = {
+        ['item'] = 'weapon_blueprint_microsmg',
+        ['amount'] = {
+            ['min'] = 1,
+            ['max'] = 4
+        },
+        ['probability'] = 0.1
+    },
+    [9] = {
+        ['item'] = 'weapon_blueprint_pistol50',
+        ['amount'] = {
+            ['min'] = 1,
+            ['max'] = 4
+        },
+        ['probability'] = 0.1
+    },
 }
 
 Config.Locations = {

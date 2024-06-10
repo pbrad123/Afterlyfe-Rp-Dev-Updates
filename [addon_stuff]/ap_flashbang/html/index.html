@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>sound</title>
+</head>
+
+<body>
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js" type="text/javascript"></script>
+
+	<script>
+		var audioPlayer = null;
+		window.addEventListener('message', function (event) {
+			if (event.data.transactionType == "playSound") {
+				if (audioPlayer != null) {
+					audioPlayer.pause();
+				}
+
+				if (event.data.transactionFile) {
+					event.data.transactionFile = event.data.transactionFile.replace(/[\\\/]/ig, "");
+					if (!['ogg', 'wav', 'mp3'].includes(event.data.transactionFile.split(".").pop())) {
+						event.data.transactionFile += '.ogg';
+					}
+				}
+
+				audioPlayer = new Howl({src: [`./sounds/${event.data.transactionFile}`]});
+
+				audioPlayer.volume(event.data.transactionVolume);
+				audioPlayer.play();
+			}
+		});
+	</script>
+</body>
+
+</html>

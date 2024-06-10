@@ -27,11 +27,13 @@ Config.Rewards = {
             { item = 'thermite',        min = 1, max = 1 },
             { item = 'cryptostick',     min = 1, max = 1 },
             { item = 'weapon_golfclub', min = 1, max = 1 },
+            { item = 'weapon_blueprint_snspistol', min = 1, max = 1 },
         },
         ['kitchen'] = {
             { item = 'tosti',     min = 1, max = 3 },
             { item = 'sandwich',  min = 1, max = 2 },
-            { item = 'goldchain', min = 1, max = 1 }
+            { item = 'goldchain', min = 1, max = 1 },
+            { item = 'weapon_blueprint_vintagepistol', min = 1, max = 1 }
         },
         ['chest'] = {
             { item = 'plastic',             min = 1, max = 4 },
@@ -41,7 +43,8 @@ Config.Rewards = {
             { item = 'weed_skunk',          min = 1, max = 5 },
             { item = 'thermite',            min = 1, max = 1 },
             { item = 'cryptostick',         min = 1, max = 1 },
-            { item = 'weapon_combatpistol', min = 1, max = 1 }
+            { item = 'weapon_combatpistol', min = 1, max = 1 },
+            { item = 'weapon_blueprint_appistol', min = 1, max = 1 }
         },
         ['livingroom'] = {
             { item = 'plastic',      min = 1, max = 4 },
@@ -51,7 +54,8 @@ Config.Rewards = {
             { item = 'thermite',     min = 1, max = 1 },
             { item = 'cryptostick',  min = 1, max = 1 },
             { item = 'tablet',       min = 1, max = 1 },
-            { item = 'pistol_ammo',  min = 1, max = 3 }
+            { item = 'pistol_ammo',  min = 1, max = 3 },
+            { item = 'weapon_blueprint_heavypistol',  min = 1, max = 3 }
         }
     }
 }

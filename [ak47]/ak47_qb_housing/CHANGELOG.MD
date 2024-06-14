@@ -168,3 +168,11 @@
         => config.lua
         => modules/init/server/main.lua
         => modules/realestate/server/realestate.lua
+## v6.6.1
+    -new qb-inventory support added
+    Replace:  
+        => modules/inventory/config.lua
+        => modules/inventory/client/inventory.lua
+        => modules/inventory/server/inventory.lua
+    Note:
+        you have to set "qb-inventory-new" in modules/inventory/config.lua

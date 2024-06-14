@@ -56,6 +56,10 @@ RegisterNetEvent('ak47_qb_housing:registeroxinventory', function(hid, data, uid)
 	exports["ox_inventory"]:RegisterStash(identifier, identifier, data.slots, data.weight * 1000)
 end)
 
+RegisterNetEvent('ak47_qb_housing:OpenQbInventory', function(identifier, data)
+	exports["qb-inventory"]:OpenInventory(source, identifier, data)
+end)
+
 RegisterNetEvent('ak47_qb_housing:removeinventory', function(hid, uid, weight)
 	local identifier = 'housing:'..hid..':'..uid
 	if Config.Inventory.script == 'ak47_inventory' then

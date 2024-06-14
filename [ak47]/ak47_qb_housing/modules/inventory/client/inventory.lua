@@ -32,6 +32,8 @@ AddEventHandler('ak47_qb_housing:openinventory', function(hid, uid, weight, slot
 	if Config.Inventory.script == 'qb-inventory' then
 		TriggerServerEvent("inventory:server:OpenInventory", "stash", identifier, {maxweight = weight * 1000, slots = slots})
         TriggerEvent("inventory:client:SetCurrentStash", identifier)
+    elseif Config.Inventory.script == 'qb-inventory-new' then
+		TriggerServerEvent("ak47_qb_housing:OpenQbInventory", identifier, {maxweight = weight * 1000, slots = slots, label = 'Housing:'..hid})
 	elseif Config.Inventory.script == 'ox_inventory' then
 		TriggerServerEvent('ak47_qb_housing:registeroxinventory', hid, {weight = weight, slots = slots}, uid)
 		exports["ox_inventory"]:openInventory('stash', identifier)

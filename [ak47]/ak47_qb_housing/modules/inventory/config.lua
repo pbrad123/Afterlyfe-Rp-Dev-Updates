@@ -1,5 +1,5 @@
 Config.Inventory = {
-	script = 'auto', --qb-inventory, ox_inventory, qs-inventory, mf-inventory, cheeza_inventory, core_inventory
+	script = 'auto', --qb-inventory, qb-inventory-new, ox_inventory, qs-inventory, mf-inventory, cheeza_inventory, core_inventory
 	Storage = {
 		[`gr_prop_gr_tool_chest_01a`] 	= {weight = 100,  slots = 20},
 

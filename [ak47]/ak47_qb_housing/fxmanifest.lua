@@ -2,7 +2,7 @@ fx_version 'adamant'
 game 'gta5'
 author "MenanAk47"
 description "Advanced Housing System"
-version "6.6"
+version "6.6.1"
 
 ui_page "nui/index.html"
 

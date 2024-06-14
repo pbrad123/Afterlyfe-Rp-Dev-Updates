@@ -8,33 +8,40 @@ version '1.0.0'
 lua54 'yes'
 
 client_scripts {
-	'shared.lua',
-	'config.lua',
-	'cl_utils.lua',
-	'cl_smartfires.lua',
-	'cl_exports.lua',
+    'config.lua',
+    'cl_utils.lua',
+	'cl_hose.lua',
+}
+
+server_scripts {
+    -- "@vrp/lib/utils.lua",
+    'config.lua',
+    'sv_exports.lua',
+	'sv_hose.lua',
 }
 
 shared_script '@es_extended/imports.lua'
 
-server_scripts {
-	-- "@vrp/lib/utils.lua",
-	'shared.lua',
-	'config.lua',
-	'sv_smartfires.lua',
-	'sv_utils.lua',
-	'sv_exports.lua',
-}
-
 escrow_ignore {
-	'shared.lua',
-	'config.lua',
-	'sv_utils.lua',
-	'sv_exports.lua',
-	'cl_utils.lua',
-	'cl_exports.lua',
+    'stream/*',
+    'hose/*',
+    'config.lua',
+    'cl_utils.lua',
+    'sv_exports.lua',
 }
 
--- Smart Fires created by London Studios.
+files {
+	'hose/pedpersonality.meta',
+	'hose/weaponanimations.meta',
+	'hose/weaponarchetypes.meta',
+	'hose/weapons.meta',
+}
+
+data_file 'WEAPONINFO_FILE' 'hose/weapons.meta'
+data_file 'WEAPON_METADATA_FILE' 'hose/weaponarchetypes.meta'
+data_file 'WEAPON_ANIMATIONS_FILE' 'hose/weaponanimations.meta'
+data_file 'PED_PERSONALITY_FILE' 'hose/pedpersonality.meta'
+
+-- HoseLS created by London Studios.
 -- Join our Discord server here: https://discord.gg/htyaZNaG
 dependency '/assetpacks'

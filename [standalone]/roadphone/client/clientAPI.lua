@@ -202,21 +202,6 @@ RegisterNUICallback('sendDispatch', function(data, cb)
     cb('ok')
 end)
 
-function oxInventoryCheck() --https://overextended.dev/ox_inventory/Functions/Client#search
-    if (GetResourceState('ox_inventory') == 'started' or Config.oxInventory) and Config.NeedItem then
-        for k, v in pairs(Config.Items) do
-            local count = exports.ox_inventory:Search('count', v)
-            if count and count >= 1 then
-                return true, v
-            end
-        end
-    else
-        local phoneModel = "phone"
-        return true, phoneModel
-    end
-    return false, nil
-end
-
 
 function testMail()
     local data = {

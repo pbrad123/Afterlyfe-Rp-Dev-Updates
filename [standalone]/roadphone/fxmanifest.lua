@@ -4,7 +4,7 @@ game 'gta5'
 
 author 'RoadShop | https://fivem.roadshop.org'
 description 'RoadPhone FiveM Phone'
-version '1.4.5'
+version '1.5.0'
 
 lua54 'yes'
 
@@ -97,7 +97,6 @@ escrow_ignore {
     'locales/*.lua',
     'client/clientAPI.lua',
     'client/vehicle_names.lua',
-    'client/camera.lua',
     'server/billing.lua',
     'server/serverAPI/*.lua',
     'client/animation.lua',

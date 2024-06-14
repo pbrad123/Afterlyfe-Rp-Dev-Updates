@@ -41,7 +41,7 @@ Config.PMAVoiceExport = "pma-voice" --exports["pma-voice"]
 Config.SaltyExport = "saltychat" --exports["saltychat"]
 
 
-Config.UsePmaVoice = true --We recommend: https://github.com/AvarianKnight/pma-voice
+Config.UsePmaVoice = false --We recommend: https://github.com/AvarianKnight/pma-voice
 Config.UseMumbleVoip = false --OLD AND KNOWN BROKEN, Please use PMAVoice
 Config.UseSaltyChat = false --Works perfect with SaltyChat 2.6
 Config.UseTokoVoip = false
@@ -71,11 +71,13 @@ Config.ValetDeliveryPrice = 500 --How much it costs to have your car delivered
 Config.OwnedVehiclesTable = "player_vehicles" --Change this if you use a different table name for owned vehicles
 
 
+-------Camera-------
+
+Config.WalkableCamera = true --Set to false if you want to disable the walkable camera
+
 -------Crypto-------
 
 Config.Crypto = true
-
-
 
 -------Radio-------
 
@@ -96,7 +98,7 @@ Config.lockedRadioChannels = { --Lock Radio Channels for Jobs
 -------Billings-------
 
 Config.myBilling = false 
-Config.okokBilling = true
+Config.okokBilling = false
 Config.JaksamBilling = false
 Config.bcsCompanyManager = false
 Config.codemBilling = false
@@ -105,7 +107,6 @@ Config.codemBilling = false
 -------Inventory-------
 
 Config.codeMInventory = false --Set to true if you use codeM_inventory script
-Config.oxInventory = false --Set to true if you use ox_inventory script
 
 ----------Banking----------
 

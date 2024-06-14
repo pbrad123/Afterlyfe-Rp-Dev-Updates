@@ -1,5 +1,5 @@
 {
-    "background": "/public/img/backgrounds/15_1.png",
+    "background": "/public/img/backgrounds/pink_dark.jpg",
     "default_ringtone": "Reflection",
     "lockscreen": true,
     "default_musicsearch": "Rammstein",
@@ -544,18 +544,6 @@
             "redirect": "game_pacman"
         },
         {
-            "name": "DonkeyKong",
-            "icon": "/public/img/Apps/donkeykong.jpg",
-            "description": "Mario's first adventure",
-            "stars": 4.7,
-            "age": 17,
-            "chart": 1,
-            "developer": "RoadShop",
-            "language": "ENG",
-            "size": 32,
-            "redirect": "game_donkeykong"
-        },
-        {
             "name": "Jumperino",
             "icon": "/public/img/Apps/jumperino.png",
             "description": "Attention: Insanely addicted",
@@ -586,7 +574,7 @@
             "stars": 4.5,
             "age": 17,
             "chart": 1,
-            "developer": "Google LLC",
+            "developer": "RoadShop",
             "language": "ENG",
             "size": 284,
             "redirect": "youtube"
@@ -610,7 +598,7 @@
             "stars": 4.3,
             "age": 12,
             "chart": 1,
-            "developer": "Apple",
+            "developer": "RoadShop",
             "language": "ENG",
             "size": 138,
             "redirect": "music"
@@ -688,18 +676,6 @@
             "redirect": "game_2048"
         },
         {
-            "name": "Livestream",
-            "icon": "/public/img/Apps/livestream.png",
-            "description": "Broadcast live from your phone to viewers",
-            "stars": 4.8,
-            "age": 17,
-            "chart": 57,
-            "developer": "RoadShop",
-            "language": "ENG",
-            "size": 54,
-            "redirect": "livestream"
-        },
-        {
             "name": "News",
             "icon": "/public/img/Apps/news.png",
             "description": "Get the best news today!",
@@ -713,7 +689,9 @@
         }
     ],
     "backgrounds": {
-        "default": "/public/img/backgrounds/15_1.png",
+        "default": "/public/img/backgrounds/pink_dark.jpg",
+        "background22": "/public/img/backgrounds/azure_dark.jpg",
+        "background21": "/public/img/backgrounds/15_1.png",
         "background20": "/public/img/backgrounds/15_2.png",
         "background18": "/public/img/backgrounds/15_3.png",
         "background17": "/public/img/backgrounds/background.png",
@@ -796,7 +774,7 @@
             "SETTINGS_APP_GENERAL_DATEANDTIME": "Date & Time",
             "SETTINGS_APP_GENERAL_DATEANDTIME_HEADER": "Date & Time",
             "SETTINGS_APP_GENERAL_DATEANDTIME_24HOUR_FORMAT": "24-Hour Time",
-            "SETTINGS_APP_SIDEBAR_ACCOUNT_NOT_LOGGED_IN": "Setup Cloud, the App Store and more",
+            "SETTINGS_APP_SIDEBAR_ACCOUNT_NOT_LOGGED_IN": "Setup Cloud, the App Shop and more",
             "SETTINGS_APP_GENERAL_UPDATE_IS_UP_TO_DATE": "is up to date",
             "SETTINGS_APP_GENERAL_UPDATE_IS_NOT_UP_TO_DATE": "is not up to date",
             "SETTINGS_APP_SIDEBAR_ACCOUNT_LOGGED_IN": "Road ID, Cloud+. Media & Purchases",
@@ -1414,7 +1392,7 @@
             "APP_GALLERY_LIBARY_YEARS": "Years",
             "APP_GALLERY_LIBARY_MONTHS": "Months",
             "APP_GALLERY_LIBARY_DAYS": "Days",
-            "APP_GALLERY_LIBARY_ALL_PHOTOS": "All Photos",
+            "APP_GALLERY_LIBARY_ALL_PHOTOS": "All",
             "APP_ZEDGE_FEATURED": "Featured",
             "CONTROL_CENTRE_FOCUS": "Focus",
             "CONTROL_CENTRE_DO_NOT_DISTURB": "Do Not Disturb On",
@@ -1467,7 +1445,7 @@
             "APP_TELLONYM_REGISTER_MAIL_NOT_VALID": "Mail not valid",
             "APP_TELLONYM_REGISTER_MAIL_NOT_VALID_TEXT": "The mail is not valid.",
             "APP_TELLONYM_NOTIF_NEW_TELL": "You have received a tell",
-            "APP_YELLOWPAGES_NOTIF_NEW_POST": "New yellow pages post!",
+            "APP_YELLOWPAGES_NOTIF_NEW_POST": "New advertising post!",
             "APP_NEWS_NOTIF_NEW_POST": "New news post!",
             "APP_INSTAGRAM_NOTIF_NEW_POST": "has posted a new photo",
             "APP_INSTAGRAM_POST_VIEW_ALL_COMMENTS": "View all comments",
@@ -1550,7 +1528,10 @@
             "APP_SERVICE_DISPATCH_STATUS_ACCEPTED": "Accepted",
             "APP_SERVICE_DISPATCH_STATUS_PENDING": "Pending",
             "APP_SERVICE_DISPATCH_STATUS_FINISHED": "Finished",
-            "APP_SERVICE_DISPATCH_STATUS_DECLINED": "Declined"
+            "APP_SERVICE_DISPATCH_STATUS_DECLINED": "Declined",
+            "APP_SETTINGS_ACCOUNT_NO_EMAIL_FOUND": "No email found",
+            "LOCKSCREEN_EMERGENCY_BUTTON_TEXT": "Emergency",
+            "SETTINGS_APP_LARGE_APP_ICONS": "Large App Icons"
         },
         "de_DE": {
             "APP_OPEN_JOB_REQUIREMENT_TITLE": "Job-Anforderung",
@@ -2220,7 +2201,7 @@
             "APP_GALLERY_LIBARY_YEARS": "Jahre",
             "APP_GALLERY_LIBARY_MONTHS": "Monate",
             "APP_GALLERY_LIBARY_DAYS": "Tage",
-            "APP_GALLERY_LIBARY_ALL_PHOTOS": "Alle Fotos",
+            "APP_GALLERY_LIBARY_ALL_PHOTOS": "Alle",
             "APP_ZEDGE_FEATURED": "Featured",
             "CONTROL_CENTRE_FOCUS": "Fokus",
             "CONTROL_CENTRE_DO_NOT_DISTURB": "Nicht stören ein",
@@ -2355,7 +2336,10 @@
             "APP_SERVICE_DISPATCH_STATUS_ACCEPTED": "Akzeptiert",
             "APP_SERVICE_DISPATCH_STATUS_PENDING": "Ausstehend",
             "APP_SERVICE_DISPATCH_STATUS_FINISHED": "Erledigt",
-            "APP_SERVICE_DISPATCH_STATUS_DECLINED": "Abgelehnt"
+            "APP_SERVICE_DISPATCH_STATUS_DECLINED": "Abgelehnt",
+            "APP_SETTINGS_ACCOUNT_NO_EMAIL_FOUND": "Keine E-Mail hinterlegt",
+            "LOCKSCREEN_EMERGENCY_BUTTON_TEXT": "Notruf",
+            "SETTINGS_APP_LARGE_APP_ICONS": "Große App-Symbole"
         },
         "fr_FR": {
             "APP_OPEN_JOB_REQUIREMENT_TITLE": "Exigence d'emploi",
@@ -2413,7 +2397,7 @@
             "SETTINGS_APP_GENERAL_DATEANDTIME": "Date et heure",
             "SETTINGS_APP_GENERAL_DATEANDTIME_HEADER": "Date et heure",
             "SETTINGS_APP_GENERAL_DATEANDTIME_24HOUR_FORMAT": "Heure 24 heures",
-            "SETTINGS_APP_SIDEBAR_ACCOUNT_NOT_LOGGED_IN": "Configurer Cloud, l'App Store et plus encore",
+            "SETTINGS_APP_SIDEBAR_ACCOUNT_NOT_LOGGED_IN": "Configurer Cloud, l'App Shop et plus encore",
             "SETTINGS_APP_GENERAL_UPDATE_IS_UP_TO_DATE": "est à jour",
             "SETTINGS_APP_GENERAL_UPDATE_IS_NOT_UP_TO_DATE": "n'est pas à jour",
             "SETTINGS_APP_SIDEBAR_ACCOUNT_LOGGED_IN": "Road ID, Cloud+. Médias et achats",
@@ -3135,7 +3119,7 @@
             "SETTINGS_APP_GENERAL_DATEANDTIME": "Fecha y hora",
             "SETTINGS_APP_GENERAL_DATEANDTIME_HEADER": "Fecha y hora",
             "SETTINGS_APP_GENERAL_DATEANDTIME_24HOUR_FORMAT": "Formato de 24 horas",
-            "SETTINGS_APP_SIDEBAR_ACCOUNT_NOT_LOGGED_IN": "Configurar Cloud, App Store y más",
+            "SETTINGS_APP_SIDEBAR_ACCOUNT_NOT_LOGGED_IN": "Configurar Cloud, App Shop y más",
             "SETTINGS_APP_GENERAL_UPDATE_IS_UP_TO_DATE": "está actualizado",
             "SETTINGS_APP_GENERAL_UPDATE_IS_NOT_UP_TO_DATE": "no está actualizado",
             "SETTINGS_APP_SIDEBAR_ACCOUNT_LOGGED_IN": "ID de carretera, Cloud+. Medios y compras",
@@ -4393,7 +4377,7 @@
             "SETTINGS_APP_GENERAL_DATEANDTIME": "Data i godzina",
             "SETTINGS_APP_GENERAL_DATEANDTIME_HEADER": "Data i godzina",
             "SETTINGS_APP_GENERAL_DATEANDTIME_24HOUR_FORMAT": "Czas 24-godzinny",
-            "SETTINGS_APP_SIDEBAR_ACCOUNT_NOT_LOGGED_IN": "Skonfiguruj chmurę, App Store i więcej",
+            "SETTINGS_APP_SIDEBAR_ACCOUNT_NOT_LOGGED_IN": "Skonfiguruj chmurę, App Shop i więcej",
             "SETTINGS_APP_GENERAL_UPDATE_IS_UP_TO_DATE": "jest aktualny",
             "SETTINGS_APP_GENERAL_UPDATE_IS_NOT_UP_TO_DATE": "jest nieaktualny",
             "SETTINGS_APP_SIDEBAR_ACCOUNT_LOGGED_IN": "Identyfikator drogi, Cloud+. Media i zakupy",
@@ -5020,7 +5004,7 @@
             "SETTINGS_APP_GENERAL_DATEANDTIME": "Ημερομηνία & ώρα",
             "SETTINGS_APP_GENERAL_DATEANDTIME_HEADER": "Ημερομηνία & ώρα",
             "SETTINGS_APP_GENERAL_DATEANDTIME_24HOUR_FORMAT": "24-Ώρο",
-            "SETTINGS_APP_SIDEBAR_ACCOUNT_NOT_LOGGED_IN": "Ρυθμίστε το Cloud, το App Store και πολλά άλλα",
+            "SETTINGS_APP_SIDEBAR_ACCOUNT_NOT_LOGGED_IN": "Ρυθμίστε το Cloud, το App Shop και πολλά άλλα",
             "SETTINGS_APP_GENERAL_UPDATE_IS_UP_TO_DATE": "Είναι ενημερωμένο",
             "SETTINGS_APP_GENERAL_UPDATE_IS_NOT_UP_TO_DATE": "΄Δεν είναι ενημερωμένο",
             "SETTINGS_APP_SIDEBAR_ACCOUNT_LOGGED_IN": "Road ID, Cloud+. Μέσα & Αγορές",
@@ -5768,7 +5752,7 @@
             "SETTINGS_APP_GENERAL_DATEANDTIME": "Datum a čas",
             "SETTINGS_APP_GENERAL_DATEANDTIME_HEADER": "Datum a čas",
             "SETTINGS_APP_GENERAL_DATEANDTIME_24HOUR_FORMAT": "24hodinový formát",
-            "SETTINGS_APP_SIDEBAR_ACCOUNT_NOT_LOGGED_IN": "Nastavte Cloud, App Store a další",
+            "SETTINGS_APP_SIDEBAR_ACCOUNT_NOT_LOGGED_IN": "Nastavte Cloud, App Shop a další",
             "SETTINGS_APP_GENERAL_UPDATE_IS_UP_TO_DATE": "je aktuální",
             "SETTINGS_APP_GENERAL_UPDATE_IS_NOT_UP_TO_DATE": "není aktuální",
             "SETTINGS_APP_SIDEBAR_ACCOUNT_LOGGED_IN": "Road ID, Cloud+. Média a nákupy",

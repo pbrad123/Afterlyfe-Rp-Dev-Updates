@@ -16,14 +16,7 @@ QBCore.Functions.CreateCallback('roadphone:getItemAmount', function(source, cb)
             return;
         end
         for i = 1, #Config.Items, 1 do
-            if Config.oxInventory then
-                local items = exports.ox_inventory:GetItemCount(source, Config.Items[i])
-
-                if items then
-                    cb(Config.Items[i])
-                    return
-                end
-            elseif Config.codeMInventory then
+            if Config.codeMInventory then
 
                 local hasItem = exports['codem-inventory']:HasItem(source, Config.Items[i], 1)
 
@@ -60,14 +53,7 @@ QBCore.Functions.CreateCallback('roadphone:getRadioAmount', function(source, cb)
             return;
         end
         for i = 1, #Config.RadioItems, 1 do
-            if Config.oxInventory then
-                local items = exports.ox_inventory:GetItemCount(source, Config.RadioItems[i])
-
-                if items then
-                    cb(true)
-                    return
-                end
-            elseif Config.codeMInventory then
+            if Config.codeMInventory then
 
                 local hasItem = exports['codem-inventory']:HasItem(source, Config.RadioItems[i], 1)
 
@@ -127,7 +113,11 @@ function getJobName(identifier)
 
     local xPlayer = QBCore.Functions.GetPlayerByCitizenId(identifier)
 
-    return xPlayer.job.name
+    if xPlayer then
+        return xPlayer.job.name        
+    end
+
+    return nil
 
 end
 
@@ -157,7 +147,11 @@ function getNameFromIdentifier(identifier)
 
     local xPlayer = QBCore.Functions.GetPlayerByCitizenId(identifier)
 
-    return xPlayer.PlayerData.charinfo.firstname .. ' ' .. xPlayer.PlayerData.charinfo.lastname
+    if xPlayer then
+        return xPlayer.PlayerData.charinfo.firstname .. ' ' .. xPlayer.PlayerData.charinfo.lastname        
+    end
+
+    return nil
 
 end
 
@@ -473,4 +467,19 @@ function addServiceDispatch(sender, receiver, message, isRead, isOwner, image, c
 
     return data
 
+end
+
+function testMailServer(identifier)
+    local data = {
+        sender = 'RoadShop',
+        subject = "RoadShop TEST",
+        message = "Mails from scripts come back even better than before now even with <span style='color: red'>Color</span> support. <br> <br> + Support for line breaks and button support ^^",
+        button = {
+            buttonEvent = "qb-drugs:client:setLocation",
+            buttonData = "test",
+            buttonname = "test"
+          }
+    }
+
+    exports['roadphone']:sendMailOffline(identifier, data)
 end

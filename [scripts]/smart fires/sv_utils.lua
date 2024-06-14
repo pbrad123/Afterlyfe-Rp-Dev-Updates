@@ -185,6 +185,25 @@ function handleAutomaticFireCreation(playerTable)
         TriggerEvent('ps-dispatch:server:notify', dispatchData)
     end
 
+    if main.automaticFires.qsDispatch.enabled then
+        TriggerEvent((main.automaticFires.qsDispatch.resourceName .. ':server:CreateDispatchCall'), {
+            job = main.automaticFires.qsDispatch.jobs,
+            callLocation = coords,
+            callCode = main.automaticFires.qsDispatch.callCode,
+            message = main.automaticFires.qsDispatch.message,
+            flashes = main.automaticFires.qsDispatch.flashes,
+            image = main.automaticFires.qsDispatch.image,
+            blip = {
+                sprite = main.automaticFires.qsDispatch.blipSprite,
+                scale = main.automaticFires.qsDispatch.blipScale,
+                colour = main.automaticFires.qsDispatch.blipColour,
+                flashes = main.automaticFires.qsDispatch.blipflash,
+                text = main.automaticFire.qsDispatch.blipText,
+                time = main.automaticFires.qsDispatch.blipTime,
+            }
+        })
+    end
+
     if main.automaticFires.rcoreDispatch.enabled then
 
         local data = {

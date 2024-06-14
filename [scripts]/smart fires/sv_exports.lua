@@ -23,6 +23,14 @@ function StopFireById(id)
     end
 end
 
+function IsFireStillActive(id)
+    if fires[id] ~= nil then
+        return true
+    end
+end
+
+exports("IsFireStillActive", IsFireStillActive)
+
 exports("StopFireById", StopFireById)
 
 if main.automaticFires.enabled then

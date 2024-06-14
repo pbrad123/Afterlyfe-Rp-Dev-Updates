@@ -7,6 +7,7 @@
 main = {
     oxInventory = false, -- To use the lighter :-)
     lighterFireSize = 3.0,
+    lighterOffset = {x = 0.0, y = 0.0, z = 3.0}, -- You can change these values to change the offset of the fire spawned from the actual item itself
     fireSpawnDistance = 200.0, -- This is the distance the player must be within to a fire to spawn in (for performance)
     smokeSpawnDistance = 500.0,-- This is the distance the player must be within to smoke to spawn in (for performance)
     usingHoseLS = true, -- Also enable this if you are using SmartHose or another hose system that works similar.
@@ -23,11 +24,11 @@ main = {
 
     useMythicNotify = false,
 
-    distanceToExtinguish = 8.0,
+    distanceToExtinguish = 10.0,
 
     societyPayments = {
-        qbManagement = true,
-        qbBossMenu = true,
+        qbManagement = false,
+        qbBossMenu = false,
         esxAddonAccount = false,
         societyName = "firefighters",
         amountPerFire = {3000, 7000} -- Random number between 3k and 7k
@@ -35,7 +36,7 @@ main = {
     -- This section allows you to setup spreadable fires
     spreadableFires = {
         automaticFires = true, -- This will allow automatic fires to spread
-        manualFires = true, -- This will set whether manual fires will spread by default (unless disabled manually when running the command)
+        manualFires = false, -- This will set whether manual fires will spread by default (unless disabled manually when running the command)
         spreadTimer = 240, -- Fires will spread every 4 minutes (240 seconds)
         spreadDistance = 5.0, -- Distance fires can spread
     },
@@ -44,7 +45,7 @@ main = {
         enabled = false, -- Here you can enable or disable automatic fires
         toggledOnInitially = true,
         enableLocationCommand = {
-            enabled = false, -- The command will give you your current location to insert here, if enabled
+            enabled = true, -- The command will give you your current location to insert here, if enabled
             commandName = "mylocation",
             locationColour = "~b~", -- blue
         },
@@ -64,7 +65,7 @@ main = {
                 ESX = {
                     enabled = false,
                     checkJob = {
-                        enabled = true, -- Enable this to use ESX job check
+                        enabled = false, -- Enable this to use ESX job check
                         jobs = {"fire", "firefighter"} -- A user can have any of the following jobs, allowing you to add multiple
                     }
                 },
@@ -85,7 +86,49 @@ main = {
                     enabled = true,
                     checkJob = {
                         enabled = true, -- Enable this to use QBCore job check
-                        jobs = {"fire"}, -- A user can have any of the following jobs, meaning you can add different jobs
+                        jobs = {"firefigher"}, -- A user can have any of the following jobs, meaning you can add different jobs
+                    },
+                    checkPermission = {
+                        enabled = true, -- Enable this to use QBCore permission check
+                        permissions = {"god"}, -- A user can have any of the following permissions, allowing you to add multiple
+                    },
+                },
+            },
+            -- This command will toggle all areas of patrol on or off
+            -- When toggled on, this means that fires will spawn in all areas of patrol
+            toggleAllAreasOfPatrolCommand = {
+                enabled = true,
+                commandName = "togglefiresaop",
+                acePermissions = {
+                    enabled = false,
+                    -- This enables ace permissions on the toggle automatic fires command
+                },
+                -- We've added ESX integration. All you need to do is enable it below and configure which jobs can use the command
+                ESX = {
+                    enabled = false,
+                    checkJob = {
+                        enabled = false, -- Enable this to use ESX job check
+                        jobs = {"fire", "firefighter"} -- A user can have any of the following jobs, allowing you to add multiple
+                    }
+                },
+                -- We've added vRP integration. All you need to do is enable it below. Then, configure if you wish to check for groups or permissions, or even both
+                vRP = {
+                    enabled = false,
+                    checkGroup = {
+                        enabled = false, -- Enable this to use vRP group check
+                        groups = {"fire", "admin"}, -- A user can have any of the following groups, meaning you can add different jobs
+                    },
+                    checkPermission = {
+                        enabled = false, -- Enable this to use vRP permission check
+                        permissions = {"player.kick"} -- A user can have any of the following permissions, allowing you to add multiple
+                    },
+                },
+                -- We've added QBCore integration. All you need to do is enable it below. Then, configure if you wish to check for jobs or permissions, or even both
+                QBCore = {
+                    enabled = true,
+                    checkJob = {
+                        enabled = true, -- Enable this to use QBCore job check
+                        jobs = {"firefighter"}, -- A user can have any of the following jobs, meaning you can add different jobs
                     },
                     checkPermission = {
                         enabled = true, -- Enable this to use QBCore permission check
@@ -94,6 +137,7 @@ main = {
                 },
             },
         },
+        
         -- Use lowercase for location categories
         locations = {
             ["city"] = {
@@ -298,6 +342,26 @@ main = {
             soundUrl = '' -- Insert your sound URL here
         },
 
+        qsDispatch = {
+            enabled = false,
+            resourceName = "qs-dispatch",
+            jobs = {'fire', 'police'},
+            callCode = {
+                code = '',
+                snippet = '',
+            },
+            message = '',
+            flashes = false,
+            image = 'https://dunb17ur4ymx4.cloudfront.net/webstore/logos/30cf9edc7043455c60397ba2f12e620993426e29.png', -- URL here
+            blipSprite = 436,
+            blipColour = 1,
+            blipScale = 1.5,
+            blipLength = 3,
+            blipflash = true,   
+            blipText = "Fire", 
+            blipTime = 60000, -- Time in milliseconds before the blip fades
+        },
+
         sonoranCAD = { -- This requires the call commands plugin
             enabled = false,
             title = "New Fire Alert",
@@ -305,7 +369,7 @@ main = {
 
         psDispatch = {
             enabled = true,
-            jobs = {'police', 'sast', 'bcso', 'fbi'},
+            jobs = {'firefighter'},
             resourceName = "ps-dispatch",
             displayCode = "10-420",
             blipName = "New Fire",
@@ -336,7 +400,7 @@ main = {
             ESX = {
                 enabled = false,
                 checkJob = {
-                    enabled = true, -- Enable this to use ESX job check
+                    enabled = false, -- Enable this to use ESX job check
                     jobs = {"fire", "firefighter"} -- A user can have any of the following jobs, allowing you to add multiple
                 }
             },
@@ -357,7 +421,7 @@ main = {
                 enabled = true,
                 checkJob = {
                     enabled = true, -- Enable this to use QBCore job check
-                    jobs = {"fire"}, -- A user can have any of the following jobs, meaning you can add different jobs
+                    jobs = {"firefighter"}, -- A user can have any of the following jobs, meaning you can add different jobs
                 },
                 checkPermission = {
                     enabled = true, -- Enable this to use QBCore permission check
@@ -370,14 +434,14 @@ main = {
             enabled = true,
             commandName = "triggerautofire",
             acePermissions = {
-                enabled = true,
+                enabled = false,
                 -- This enables ace permissions on the trigger automatic fires command
             },
             -- We've added ESX integration. All you need to do is enable it below and configure which jobs can use the command
             ESX = {
                 enabled = false,
                 checkJob = {
-                    enabled = true, -- Enable this to use ESX job check
+                    enabled = false, -- Enable this to use ESX job check
                     jobs = {"fire", "firefighter"} -- A user can have any of the following jobs, allowing you to add multiple
                 }
             },
@@ -398,7 +462,7 @@ main = {
                 enabled = true,
                 checkJob = {
                     enabled = true, -- Enable this to use QBCore job check
-                    jobs = {"fire"}, -- A user can have any of the following jobs, meaning you can add different jobs
+                    jobs = {"firefighter"}, -- A user can have any of the following jobs, meaning you can add different jobs
                 },
                 checkPermission = {
                     enabled = true, -- Enable this to use QBCore permission check
@@ -442,7 +506,7 @@ main = {
             enabled = true,
             checkJob = {
                 enabled = true, -- Enable this to use QBCore job check
-                jobs = {"fire"}, -- A user can have any of the following jobs, meaning you can add different jobs
+                jobs = {"firefighter"}, -- A user can have any of the following jobs, meaning you can add different jobs
             },
             checkPermission = {
                 enabled = true, -- Enable this to use QBCore permission check
@@ -481,7 +545,7 @@ main = {
         ESX = {
             enabled = false,
             checkJob = {
-                enabled = true, -- Enable this to use ESX job check
+                enabled = false, -- Enable this to use ESX job check
                 jobs = {"fire", "firefighter"} -- A user can have any of the following jobs, allowing you to add multiple
             }
         },
@@ -502,7 +566,7 @@ main = {
             enabled = true,
             checkJob = {
                 enabled = true, -- Enable this to use QBCore job check
-                jobs = {"fire"}, -- A user can have any of the following jobs, meaning you can add different jobs
+                jobs = {"firefighter"}, -- A user can have any of the following jobs, meaning you can add different jobs
             },
             checkPermission = {
                 enabled = true, -- Enable this to use QBCore permission check
@@ -525,7 +589,7 @@ main = {
         ESX = {
             enabled = false,
             checkJob = {
-                enabled = true, -- Enable this to use ESX job check
+                enabled = false, -- Enable this to use ESX job check
                 jobs = {"fire", "firefighter"} -- A user can have any of the following jobs, allowing you to add multiple
             }
         },
@@ -546,7 +610,7 @@ main = {
             enabled = true,
             checkJob = {
                 enabled = true, -- Enable this to use QBCore job check
-                jobs = {"fire"}, -- A user can have any of the following jobs, meaning you can add different jobs
+                jobs = {"firefighter"}, -- A user can have any of the following jobs, meaning you can add different jobs
             },
             checkPermission = {
                 enabled = true, -- Enable this to use QBCore permission check
@@ -588,7 +652,7 @@ main = {
             enabled = true,
             checkJob = {
                 enabled = true, -- Enable this to use QBCore job check
-                jobs = {"fire"}, -- A user can have any of the following jobs, meaning you can add different jobs
+                jobs = {"firefighter"}, -- A user can have any of the following jobs, meaning you can add different jobs
             },
             checkPermission = {
                 enabled = true, -- Enable this to use QBCore permission check
@@ -614,7 +678,7 @@ main = {
         ESX = {
             enabled = false,
             checkJob = {
-                enabled = true, -- Enable this to use ESX job check
+                enabled = false, -- Enable this to use ESX job check
                 jobs = {"fire", "firefighter"} -- A user can have any of the following jobs, allowing you to add multiple
             }
         },
@@ -635,7 +699,7 @@ main = {
             enabled = true,
             checkJob = {
                 enabled = true, -- Enable this to use QBCore job check
-                jobs = {"fire"}, -- A user can have any of the following jobs, meaning you can add different jobs
+                jobs = {"firefighter"}, -- A user can have any of the following jobs, meaning you can add different jobs
             },
             checkPermission = {
                 enabled = true, -- Enable this to use QBCore permission check
@@ -658,7 +722,7 @@ main = {
         ESX = {
             enabled = false,
             checkJob = {
-                enabled = true, -- Enable this to use ESX job check
+                enabled = false, -- Enable this to use ESX job check
                 jobs = {"fire", "firefighter"} -- A user can have any of the following jobs, allowing you to add multiple
             }
         },
@@ -679,7 +743,7 @@ main = {
             enabled = true,
             checkJob = {
                 enabled = true, -- Enable this to use QBCore job check
-                jobs = {"fire"}, -- A user can have any of the following jobs, meaning you can add different jobs
+                jobs = {"firefighter"}, -- A user can have any of the following jobs, meaning you can add different jobs
             },
             checkPermission = {
                 enabled = true, -- Enable this to use QBCore permission check
@@ -818,6 +882,10 @@ translations = {
     nowClockedOn = "~b~Success~w~: You are now clocked on.",
     alreadyClockedOff = "~r~Error~w~: You are already clocked off.",
     alreadyClockedOn = "~r~Error~w~: You are already clocked on.",
+    allAreasOfPatrolOn = "~b~Success~w~: All areas of patrol are now set to enable fire spawning.",
+    allAreasOfPatrolOff = "~b~Success~w~: All areas of patrol are now disabled.",
+    allAreasOfPatrolOnLog = "All areas of patrol are now set to enable fire spawning.",
+    allAreasOfPatrolOffLog = "All areas of patrol are now disabled.",
     clockedOffLog = "User clocked off",
     clockedOnLog = "User clocked on",
     clockOnSuggestion = "Clock on for fires",
@@ -826,6 +894,11 @@ translations = {
     spreadableHelp = "true/false",
     commandOnCooldown = "~r~Error~w~: This command is currently on cooldown",
     dumpsterTooFar = "~r~Error~w~: You are not near a dumpster.",
+    setAreaOfPatrolHelp = "Set the area of patrol for fire spawning",
+    areaOfPatrol = "Area of Patrol",
+    areaOfPatrolHelp = "Eg, city",
+    toggleAllAreasOfPatrolHelp = "Toggle all areas of patrol for fire spawning",
+
 }
 
 smokeTypes = {
@@ -946,7 +1019,7 @@ fireTypes = {
         toIncrease = {},
         multiFlamesAllowed = true, -- This defines if multiple flames are allowed for this fire type
         maximumMultipleFlames = 16, -- This defines the maximum flames allowed for this fire type
-        difficulty = 30, -- This is how difficult the fire is to put out (out of 50)
+        difficulty = 40, -- This is how difficult the fire is to put out (out of 50)
         maximumFireSizeManual = 10.0, -- This is the maximum fire size that can be created using the create fire command
         minimumFireSizeAutomatic = 1.5, -- This is the minimum fire size that is started automatically (if automatic fires are enabled)
         maximumFireSizeAutomatic = 4.5, -- This is the minimum fire size that is started automatically (if automatic fires are enabled)

@@ -35,3 +35,11 @@ function SetFoamEnabled(enabled)
 end
 
 exports("SetFoam", SetFoamEnabled)
+
+function IsFireStillActive(id)
+    if fires[id] ~= nil then
+        return true
+    end
+end
+
+exports("IsFireStillActive", IsFireStillActive)

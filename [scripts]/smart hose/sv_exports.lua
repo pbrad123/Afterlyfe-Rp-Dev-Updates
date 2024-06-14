@@ -1,106 +1,149 @@
--- These setup the foundations for ESX / vRP / QBCore permissions
-if main.hoseCommand.ESX.enabled then
-    ESX = nil
-    ESX = exports["es_extended"]:getSharedObject()
+function CreateFire(coords, size, type, notify)
+    local id = createFireId()
+    fires[id] = {coords = coords, size = size + 0.0, type = type, active = false, spreadable = false, original = true, originalId = id, initialSize = size, automatic = {created = false, type=""}}
+    TriggerClientEvent("Client:updateFireTable", -1, id, fires[id], false, false)
+    local count, playerTable = checkJobsForAutomaticFires()
+    if usingJobCheck and notify then
+        local count, playerTable = checkJobsForAutomaticFires()
+        for k, v in pairs(playerTable) do
+            TriggerClientEvent("Client:automaticFireAlert", k, id)
+        end
+    end
+    return id
 end
 
-if main.hoseCommand.vRP.enabled then
-    Proxy = module("vrp", "lib/Proxy")
-    vRP = Proxy.getInterface("vRP")
-end
+exports("CreateFire", CreateFire)
 
-if main.hoseCommand.QBCore.enabled then
-    QBCore = exports["qb-core"]:GetCoreObject()
-end
--- End of permissions setup
-
-function ToggleHose(id)
-    handleHoseToggle(id)
-end
-
-exports("ToggleHose", ToggleHose)
-
-function ToggleFoam(id)
-    if usingSmartFires then
-        toggleFoamNew(id)
-    else
-        toggleFoamOld(id)
+function StopFireById(id)
+    if fires[id] ~= nil then
+        local entry = fires[id]
+        handleSmokeAfterFire(id, entry)
+        fires[id] = nil
+        TriggerClientEvent("Client:updateFireTable", -1, id, entry, true, false)
     end
 end
 
-exports("ToggleFoam", ToggleFoam)
-
--- Permission Checks for Hose Command
--- Feel free to edit below if you feel confident
-function userHasPermission(source, location)
-    local permission = false
-    local usingPermissions = false
-    -- Ace Permissions
-    if location.acePermissions.enabled then
-        usingPermissions = true
-        -- Ace Permission Validation (if enabled in config)
-        if IsPlayerAceAllowed(source, "command."..location.commandName) then
-            permission = true
-        end
+function IsFireStillActive(id)
+    if fires[id] ~= nil then
+        return true
     end
-
-    -- ESX Permissions
-    if location.ESX.enabled then
-        local xPlayer = ESX.GetPlayerFromId(source)
-        if location.ESX.checkJob.enabled then
-            usingPermissions = true
-            for k, v in pairs(location.ESX.checkJob.jobs) do
-                if xPlayer.job.name == v then
-                    permission = true
-                end
-            end
-        end
-    end
-
-    -- vRP Permission
-    if location.vRP.enabled then
-        if location.vRP.checkPermission.enabled then
-            usingPermissions = true
-            for k, v in pairs(location.vRP.checkPermission.permissions) do
-                if vRP.hasPermission({vRP.getUserId({source}),v}) then
-                    permission = true
-                end
-            end
-        end
-
-        if location.vRP.checkGroup.enabled then
-            usingPermissions = true
-            for k, v in pairs(location.vRP.checkGroup.groups) do
-                if vRP.hasGroup({vRP.getUserId({source}),v}) then
-                    permission = true
-                end
-            end
-        end
-    end
-
-    -- QBCore Permission
-    if location.QBCore.enabled then
-        local player = QBCore.Functions.GetPlayer(source)
-        if location.QBCore.checkJob.enabled then
-            usingPermissions = true
-            for k, v in pairs(location.QBCore.checkJob.jobs) do
-                if player.PlayerData.job.name == v then
-                    permission = true
-                end
-            end
-        end
-        if location.QBCore.checkPermission.enabled then
-            usingPermissions = true
-            for k, v in pairs(location.QBCore.checkPermission.permissions) do
-                if QBCore.Functions.HasPermission(source, v) then
-                    permission = true
-                end
-            end
-        end
-    end
-
-    if not usingPermissions then
-        permission = true
-    end
-    return permission
 end
+
+exports("IsFireStillActive", IsFireStillActive)
+
+exports("StopFireById", StopFireById)
+
+if main.automaticFires.enabled then
+    function TriggerAutomaticFire()
+        local id = triggerAutoFire()
+        return id
+    end
+
+    function ToggleAutomaticFires()
+        if automaticFiresEnabled then
+            automaticFiresEnabled = false
+            TriggerClientEvent("Client:automaticFiresToggle", -1, false)
+        else
+            automaticFiresEnabled = true
+            TriggerClientEvent("Client:automaticFiresToggle", -1, false)
+        end
+    end
+    
+    exports("ToggleAutomaticFires", ToggleAutomaticFires)
+    
+    exports("TriggerAutomaticFire", TriggerAutomaticFire)
+end
+
+function StopAllFires()
+    fires = {}
+    TriggerClientEvent("Client:clearAllFires", -1)
+end
+
+exports("StopAllFires", StopAllFires)
+
+function CreateSmoke(coords, size, type)
+    local id = createFireId()
+    local smokeHandle = {coords = coords, size = size, type = type, active = false, initialSize = size}
+    smoke[id] = smokeHandle
+    TriggerClientEvent("Client:updateSmokeTable", -1, id, smokeHandle, false)
+    return id
+end
+
+exports("CreateSmoke", CreateSmoke)
+
+function StopSmokeById(id)
+    if smoke[id] ~= nil then
+        local entry = smoke[id]
+        smoke[id] = nil
+        TriggerClientEvent("Client:updateSmokeTable", -1, id, entry, true)
+    end
+end
+
+exports("StopSmokeById", StopSmokeById)
+
+function StopAllSmoke()
+    smoke = {}
+    TriggerClientEvent("Client:clearAllSmoke", -1)
+end
+
+exports("StopAllSmoke", StopAllSmoke)
+
+-- This event allows you to receive data on new automatic fires
+RegisterServerEvent("Server:newAutomaticFire")
+AddEventHandler("Server:newAutomaticFire", function(id, coords, description, size)
+    
+end)
+
+function GetAllFires()
+    return fires
+end
+
+exports("GetAllFires", GetAllFires)
+
+function GetAllSmokes()
+    return smoke
+end
+
+exports("GetAllSmokes", GetAllSmokes)
+
+if main.automaticFires.main.clockOnSystem.enabled then
+    function ClockOnUser(serverId)
+        if serverId == nil then return nil end
+        if main.logging.enabled then
+            normalLog(serverId, translations.clockedOnLog, "")
+        end
+        clockedOn[serverId] = true
+    end
+    
+    exports("ClockOnUser", ClockOnUser)
+    
+    function ClockOffUser(serverId)
+        if serverId == nil then return nil end
+        if main.logging.enabled then
+            normalLog(serverId, translations.clockedOffLog, "")
+        end
+        clockedOn[serverId] = false
+    end
+    
+    exports("ClockOffUser", ClockOffUser)
+    
+    -- This event allows you to receive data on users clocking on
+    RegisterServerEvent("Server:userClockedOn")
+    AddEventHandler("Server:userClockedOn", function(id)
+        local serverId = id
+    end)
+
+    -- This event allows you to receive data on users clocking off
+    RegisterServerEvent("Server:userClockedOff")
+    AddEventHandler("Server:userClockedOff", function(id)
+        local serverId = id
+    end)
+end
+
+function changeAOP(areaSelected)
+    if main.automaticFires.locations[areaSelected] ~= nil then
+        areaOfPatrol = areaSelected
+    end
+end
+
+exports('changeAOP', changeAOP)

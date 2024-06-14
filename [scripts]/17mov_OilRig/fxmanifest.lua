@@ -1,5 +1,5 @@
 fx_version "cerulean"
-version "1.0.38"
+version "1.0.39"
 game "gta5"
 author "17Movement"
 this_is_a_map 'yes'
